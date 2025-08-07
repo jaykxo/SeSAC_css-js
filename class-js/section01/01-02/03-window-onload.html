@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>DOM 로드 실습</title>
+    <script>
+        // 1. 아직 HTML 안 그려졌는데, 태그 찾아오려니까 못 찾음
+        // const 나의이름 = prompt("이름을 입력하세요.")
+        // document.getElementById("이름입력란").innerText = 나의이름
+
+        // 2. 전부 다 로드되고 나서 실행하기 때문에, 찾음
+        window.onload = () => {
+            const 나의이름 = prompt("이름을 입력하세요.")
+            document.getElementById("이름입력란").innerText = 나의이름
+        }
+    </script>
+</head>
+<body>
+    <b id="이름입력란"></b>의 다이어리에 오신 것을 환영합니다.
+</body>
+</html>

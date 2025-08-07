@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>플렉스박스 세로 실습</title>
+    <style>
+        body {
+            height: 100vh;
+            /* vh? viewport-height => 보이는 화면의 높이 */
+            /* vw? vieport-width => 보이는 화면의 너비 */
+            margin: 0;
+        }
+        .부모 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            background-color: skyblue;
+            /* height: 500px; */
+
+            height: 100%
+            /* 100%가 안 먹히는 상황: %란, 부모 기준으로 몇%인지를 의미 */
+        }
+    </style>
+</head>
+<body>
+    <div class="부모">
+        <div>자식1</div>
+        <div>자식2</div>
+    </div>
+</body>
+</html>

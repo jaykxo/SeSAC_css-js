@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>호이스팅 실습</title>
+    <script>
+        // 1. 함수 호이스팅: 아래에서 만든 함수 위에서 실행
+        내가만든함수()
+
+        function 내가만든함수() {
+            console.log("함수를 실행합니다!!!")
+        }
+
+        // 2. 변수 호이스팅: 아래에서 만든 변수 위에서 실행
+        console.log(내가만든변수)  // 아직 할당되지 않아서 비어있음
+
+        var 내가만든변수 = "철수" // 선언과 할당
+
+        console.log(내가만든변수)  // 여기서는 철수! 정상작동
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

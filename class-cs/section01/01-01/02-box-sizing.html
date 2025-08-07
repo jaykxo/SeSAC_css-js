@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>박스 사이징 실습</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* 패딩 연습 */
+        .네모상자1 {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+            padding-top: 30px;
+            padding-left: 20px;
+
+            /* 태그에 하나하나 입력도 가능하지만, 모든 태그에 한 번에 처리하는 것이 효율적 */
+            /* box-sizing: border-box; */
+
+            border: 10px solid blue;
+        }
+
+        /* 마진 연습 */
+        .네모상자2 {
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+        }
+
+        .인풋창 {
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="네모상자1">
+        <input type="text" />
+    </div>
+
+    <div class="네모상자2">
+        <input type="text" class="인풋창" />
+    </div>
+</body>
+</html>

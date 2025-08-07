@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>플렉스랩 실습</title>
+    <style>
+        .부모1 {
+            background-color: skyblue ;
+            display: flex;
+            flex-direction: row;
+            width: 500px;
+            gap: 10px;
+        }
+        .자식1 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border: 5px solid red;
+        }
+        .부모2 {
+            background-color: orange ;
+            display: flex;
+            flex-direction: row;
+            width: 500px;
+            gap: 10px;
+
+            flex-wrap: wrap;
+        }
+        .자식2 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border: 5px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 찌그러지는 상황 -->
+    <div class="부모1">
+        <div class="자식1">자식</div>
+        <div class="자식1">자식</div>
+        <div class="자식1">자식</div>
+        <div class="자식1">자식</div>
+        <div class="자식1">자식</div>
+        <div class="자식1">자식</div>
+    </div>
+
+    <br><br>
+
+    <!-- 아래로 내려주는 상황 -->
+    <div class="부모2">
+        <div class="자식2">자식</div>
+        <div class="자식2">자식</div>
+        <div class="자식2">자식</div>
+        <div class="자식2">자식</div>
+        <div class="자식2">자식</div>
+        <div class="자식2">자식</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>함수와 스코프 실습</title>
+    <script>
+        function 바깥쪽함수() {
+            const 바나나 = 10
+            console.log(바나나)
+
+            function 안쪽함수() {
+                // const 바나나 = 50
+                console.log(바나나) // Scope Chain에 의해 에러나지 않고, 상위 바나나 값 사용
+            }
+
+            console.log(바나나)
+
+            안쪽함수()
+
+        }
+
+        바깥쪽함수()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
