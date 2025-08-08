@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>상세페이지</title>
+    <script>
+        const 쿼리스트링 = location.search
+        const 잘게나누어담은통 = new URLSearchParams(쿼리스트링)
+        const 일기번호상자 = 잘게나누어담은통.get("my-number")
+
+        alert(`
+            로컬스토리지에 저장된 일기를 모두 조회해서,
+            일기번호가 ${일기번호상자} 인 것을 찾아서 화면에 보여주자
+            `)
+    </script>
+</head>
+<body>
+    <div>제목: </div>
+    <div>내용: </div>
+</body>
+</html>
