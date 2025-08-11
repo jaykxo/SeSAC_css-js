@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>윈도우 스크롤리스너 실습</title>
+    <script>
+        window.addEventListener("scroll", () => {
+            const 스크롤내려간길이 = window.scrollY
+            console.log(`스크롤이 ${스크롤내려간길이}만큼 내려갔어요!`)
+
+            if(스크롤내려간길이 > 0) {
+                document.getElementById("이미지").style = "border: 20px solid red"
+            } else {
+                document.getElementById("이미지").style = "border: none"
+            }
+        })
+    </script>
+</head>
+<body>
+    <img id="이미지" src="./00-image.jpg" width="1000px">
+</body>
+</html>

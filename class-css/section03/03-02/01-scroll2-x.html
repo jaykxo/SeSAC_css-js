@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>가로스크롤 실습</title>
+    <style>
+        .부모 {
+            width: 200px;
+            height: 300px;
+            border: 1px solid blue;
+            display: flex;
+            flex-direction: row; 
+
+            overflow-x: scroll;
+        }
+
+        .자식 {
+            width: 150px;
+            height: 180px;
+            background-color: skyblue;
+            margin: 10px;
+            
+            /* 부모가 flex이지만 찌그러지지 않음 */
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="부모">
+        <div class="자식"></div>
+        <div class="자식"></div>
+        <div class="자식"></div>
+        <div class="자식"></div>
+        <div class="자식"></div>
+        <div class="자식"></div>
+    </div>
+</body>
+</html>

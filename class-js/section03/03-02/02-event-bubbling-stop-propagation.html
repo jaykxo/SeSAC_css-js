@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>이벤트버블링 전파중단 실습</title>
+    <style>
+        .사진 {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            cursor: pointer;
+        } 
+    </style>
+    <script>
+        const 사진확대기능 = () => {
+            document.getElementById("사진영역").style = "width: 100vw; height: 100vh"
+        }
+
+        const 좋아요기능 = (event) => {
+            // event.preventDefault()
+            event.stopPropagation() // 부모태그로 클릭이벤트가 전파(propagation)되는 것을 중단(stop)
+
+            alert("좋아요가 +1 올랐습니다.")
+        }
+    </script>
+</head>
+<body>
+    <div id="사진영역" class="사진" onclick="사진확대기능()">
+        <button onclick="좋아요기능(event)">좋아요 +1</button>
+    </div>
+    <p>클릭하여 전체보기</p>
+</body>
+</html>
