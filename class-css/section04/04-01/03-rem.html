@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>rem 실습</title>
+    <style>
+        html {
+            font-size: 16px;
+        }
+        
+        .상자 {
+            width: 10rem;
+            height: 10rem;
+            background-color: skyblue;
+            margin: 20px;
+        }
+
+        @media (max-width: 767px) {
+            html {
+                font-size: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="상자"></div>
+    <div class="상자"></div>
+    <div class="상자"></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>그리드 vs 플렉스</title>
+    <style>
+        .플렉스부모 {
+            width: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: lightgray;
+            gap: 10px;
+
+            /* justify-content: center; */
+        }
+
+        .그리드부모 {
+            width: 400px;
+            display: grid;
+            background-color: lightgray;
+            grid-template-columns: 1fr 1fr 1fr;
+             place-items: center; /* 상하좌우 모두 */
+        }
+
+        .버튼 {
+            width: 100px;
+            background-color: skyblue;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="플렉스부모">
+        <div class="버튼">신용카드</div>
+        <div class="버튼">계좌이체</div>
+        <div class="버튼">휴대폰결제</div>
+        <div class="버튼">무통장입금</div>
+        <div class="버튼">포인트결제</div>
+    </div>
+
+    <br /><br />
+
+    <div class="그리드부모">
+        <div class="버튼">신용카드</div>
+        <div class="버튼">계좌이체</div>
+        <div class="버튼">휴대폰결제</div>
+        <div class="버튼">무통장입금</div>
+        <div class="버튼">포인트결제</div>
+    </div>
+</body>
+</html>

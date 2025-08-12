@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>스크롤 바닥감지 실습</title>
+    <script>
+        window.addEventListener("scroll", () => {
+            const 스크롤전체길이 = document.documentElement.scrollHeight 
+            const 스크롤내려간길이 = document.documentElement.scrollTop  // window.scrollY 동일
+            const 스크롤바길이 = document.documentElement.clientHeight
+            console.log(`스크롤전체길이: ${스크롤전체길이}`)
+            console.log(`스크롤내려간길이 + 스크롤바길이: ${스크롤내려간길이 + 스크롤바길이}`)
+
+            if(스크롤전체길이 === Math.round(스크롤내려간길이 + 스크롤바길이)) {
+                alert("스크롤이 바닥에 닿았습니다!")
+            }
+        })
+    </script>
+</head>
+<body>
+    <img src="./00-image.jpg" width="100%" />
+</body>
+</html>
