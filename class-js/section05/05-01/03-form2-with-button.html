@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>폼 실습</title>
+    <script>
+        const 글등록기능 = () => {
+            alert("게시글 등록이 완료되었습니다.")
+        }
+        const 임시저장기능 = () => {
+            alert("임시저장 되었습니다.")
+        }
+    </script>
+</head>
+<body>
+    <!-- backend 컴퓨터와 연결을 한다면, action에서 주소를 입력 -->
+    <form action="#" onsubmit="글등록기능()">
+        제목 : <input type="text" /><br />
+        내용 : <input type="text" /><br />
+        <button type="submit">등록하기</button>
+        <!-- rest 기능 -->
+        <button type="reset">모두지우기</button>
+        <!-- submit와 관계 없는 다른 기능 -->
+        <!-- type을 지정하지않고, onclick만 작성할 경우, 디폴트값인 submit이 같이 작동 -->
+        <button type="button" onclick="임시저장기능()">임시저장</button> 
+    </form>
+</body>
+</html>

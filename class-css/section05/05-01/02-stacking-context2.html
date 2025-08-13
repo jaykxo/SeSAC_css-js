@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>z-index 실습</title>
+    <style>
+        .CSS적부모 {
+            margin: 100px;
+            padding: 100px;
+        
+            width: 1000px;
+            height: 1000px;
+            background-color: lightgray;
+
+            /* 부모의 재정의
+            쌓임맥락을 형성한 태그들은 쌓임맥락 내에서 새롭게 부모(컨테이닝블록) 재정의 */
+            position: absolute;
+        }
+        .부모아님 {
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+        }
+        .빨간종이 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            /* 이것만 있다고 위로 올라가는 것 아님! */
+            z-index: 999;
+
+            /* 포지션을 주어 쌓임맥락에 포함시키면, 이제는 z-index 먹힘! */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .노란종이 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+
+            position: absolute;
+            top: 25px;
+            left: 25px;
+
+            z-index: 1;
+        }
+        .파란종이 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="CSS적부모">
+        <div class="부모아님">
+            <div class="빨간종이"></div>
+            <div class="노란종이"></div>
+            <div class="파란종이"></div>
+        </div>
+    </div>
+</body>
+</html>

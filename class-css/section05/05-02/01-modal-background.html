@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>모달 실습</title>
+    <style>
+        .모달배경 {
+            display: none;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 1000vw;
+            height: 100vh;
+            background-color: lightgray;
+            opacity: 90%;
+        }
+    </style>
+    <script>
+        const 모달열기 = () => {
+            document.getElementById("모달배경ID").style = "display: block"
+        }
+    </script>
+</head>
+<body>
+    <button onclick="모달열기()">모달열기</button>
+
+    <div id="모달배경ID" class="모달배경"></div>
+</body>
+</html>

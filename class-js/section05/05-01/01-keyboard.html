@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>키보드 감지 실습</title>
+    <style>
+        .강아지 {
+            position: absolute;
+            top: 300px;
+            left: 400px;
+
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        let 부스터 = 1.0
+        window.addEventListener("keydown", (event) => {
+            const 강아지 = document.getElementById("강아지ID")
+            const 강아지스타일 = getComputedStyle(강아지)
+            const 강아지Y좌표 = Number(강아지스타일.top.replace("px", ""))
+            const 강아지X좌표 = Number(강아지스타일.left.replace("px", ""))
+
+            switch(event.key){
+                case "ArrowUp": {
+                    //강아지 위로 -20 옮기기
+                    document.getElementById("강아지ID").style = `top: ${(강아지Y좌표 - 20) / 부스터}px; left: ${강아지X좌표}px`
+                    break;
+                }
+                case "ArrowDown": {
+                    //강아지 아래로 +20 옮기기
+                    document.getElementById("강아지ID").style = `top: ${(강아지Y좌표 + 20) * 부스터}px; left: ${강아지X좌표}px`
+                    break;
+                }
+                case "ArrowLeft": {
+                    //강아지 왼쪽으로 -20 옮기기
+                    
+                    document.getElementById("강아지ID").style = `top: ${강아지Y좌표}px; left: ${(강아지X좌표 - 20) / 부스터}px`
+                    break;
+                }
+                case "ArrowRight": {
+                    //강아지 오른쪽으로 +20 옮기기    
+                    document.getElementById("강아지ID").style = `top: ${강아지Y좌표}px; left: ${(강아지X좌표 + 20) * 부스터}px`
+                    break;
+                }
+                case " ": {
+                    //강아지 속도 +0.1 올리기
+                    부스터 = 부스터 + 0.1                
+                }
+            }
+            
+        })
+    </script>
+</head>
+<body>
+    <img src="./00-image.jpg" class="강아지" id="강아지ID">
+</body>
+</html>

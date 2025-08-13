@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>z-index 실습</title>
+    <style>
+        .빨간종이 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            z-index: 999;
+        }
+        .노란종이 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+
+            position: absolute;
+            top: 25px;
+            left: 25px;
+
+            z-index: 1;
+        }
+        .파란종이 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="빨간종이"></div>
+    <div class="노란종이"></div>
+    <div class="파란종이"></div>
+</body>
+</html>
