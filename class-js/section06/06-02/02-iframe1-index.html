@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>페이지 복사방식 실습</title>
+    <style>
+        .배너 {
+            height: 100px;
+            background-color: skyblue;
+        }
+        .내비게이션 {
+            height: 50px;
+            background-color: yellow;
+        } 
+        iframe {
+            border: none;
+        }
+    </style>
+    <script>
+        const 메뉴이동 = (내가클릭한것) => {
+            switch(내가클릭한것){
+                case "일기클릭함": {
+                    document.getElementById("아이프레임").src = "02-iframe2-diary.html"
+                    break;
+                }
+                case "강아지클릭함": {
+                    document.getElementById("아이프레임").src = "02-iframe3-dog.html"
+                    break;
+                }
+                case "코드캠프클릭함": {
+                    document.getElementById("아이프레임").src = "https://codebootcamp.co.kr"
+                    break;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="배너">배너이미지</div>
+    <div class="내비게이션">
+        <button onclick="메뉴이동('일기클릭함')">일기메뉴</button>
+        <button onclick="메뉴이동('강아지클릭함')">강아지메뉴</button>
+        <button onclick="메뉴이동('코드캠프클릭함')">코드캠프</button>
+    </div>
+    <iframe id="아이프레임" src="./02-iframe2-diary.html" frameborder="0"></iframe>
+</body>
+</html>

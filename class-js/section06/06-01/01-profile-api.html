@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>프로필API 실습</title>
+    <script>
+        const 프로필불러오는기능 = () => {
+            fetch("http://main-example.codebootcamp.co.kr/profile/철수").then((받아온결과) => {
+                받아온결과.json().then((객체만뽑힌결과) => {
+                    console.log(객체만뽑힌결과)
+
+                    const 백엔드에서받은데이터 = 객체만뽑힌결과.name
+                    console.log(`백엔드에서받은데이터: ${백엔드에서받은데이터}`)
+                })
+            })
+        }
+    </script>
+</head>
+<body>
+    <button onclick="프로필불러오는기능()">프로필 불러오기</button>
+</body>
+</html>

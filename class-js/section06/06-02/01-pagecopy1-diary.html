@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>페이지 복사방식 실습</title>
+    <style>
+        .배너 {
+            height: 100px;
+            background-color: skyblue;
+        }
+        .내비게이션 {
+            height: 50px;
+            background-color: yellow;
+        } 
+    </style>
+    <script>
+        const 메뉴이동 = (내가클릭한것) => {
+            switch(내가클릭한것){
+                case "일기클릭함": {
+                    location.href = "./01-pagecopy1-diary.html"
+                    break;
+                }
+                case "강아지클릭함": {
+                    location.href = "./01-pagecopy2-dog.html"
+                    break;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="배너">배너이미지</div>
+    <div class="내비게이션">
+        <button onclick="메뉴이동('일기클릭함')">일기메뉴</button>
+        <button onclick="메뉴이동('강아지클릭함')">강아지메뉴</button>
+    </div>
+    <p>일기목록 화면입니다.</p>
+    <p>일기카드1</p>
+    <p>일기카드2</p>
+    <p>...</p>
+</body>
+</html>
